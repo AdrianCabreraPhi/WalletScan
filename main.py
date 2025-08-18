@@ -29,7 +29,7 @@ with st.sidebar:
     with icon:
         st.button("", type="tertiary", icon=":material/info:", help=utils.list_of_available_chains()) # info tooltip
 
-    wallet = st.text_input(label="", label_visibility="collapsed",icon="🗒")
+    wallet = st.text_input(label="input wallet", label_visibility="collapsed",icon="🗒")
     scanButton = st.button("Scan 🔎 ",use_container_width=True,type="primary")
 #SIDEBAR END
 
