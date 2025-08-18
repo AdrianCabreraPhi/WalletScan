@@ -4,14 +4,25 @@
 ## Instructions
 1. Get api key from https://goldrush.dev/
 2. Use name GOLD_RUSH_API_KEY
-3. Install streamlit
+
+## Install & Run
+### 1. Docker
   ```bash
-  pip install streamlit
+ to do 
   ```
-4. Run project:
+### 2. Run locally
+  1. Create conda environment
   ```bash
-  streamlit run main.py
+  conda env create -f environment.yml
   ```
+   2. Activate conda environment
+   ```bash
+   conda activate walletscan
+   ```
+   3. Execute app
+   ```bash
+   streamlit run main.py
+   ```
 
 <img width="1919" height="997" alt="wallet_scan2" src="https://github.com/user-attachments/assets/89835032-878b-4952-ad14-0a1f7db10f8a" />
 
