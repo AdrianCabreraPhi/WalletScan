@@ -12,8 +12,11 @@
   ```bash
   streamlit run main.py
   ```
-  
-[wallet_scan.webm](https://github.com/user-attachments/assets/d052f6f4-ea01-4625-90a4-d42b0cc9d47b)
+
+<img width="1919" height="997" alt="wallet_scan2" src="https://github.com/user-attachments/assets/89835032-878b-4952-ad14-0a1f7db10f8a" />
+
+<img width="1919" height="992" alt="wallet_scan3" src="https://github.com/user-attachments/assets/7a27be05-05a8-43db-b388-af8ae3edd4ef" />
+
 
 ## About Software
 - *Software was developed with python and streamlit to generate a GUI*
