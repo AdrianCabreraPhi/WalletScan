@@ -35,7 +35,7 @@ def get_balance_evm_chain(wallet,chain):
         for token in data['data']['items']:
                balance = utils.delete_no_balance_tokens(token['contract_decimals'],token['balance'])
                if balance and token['quote'] is not None and token['quote'] > 1:
-                    list_names.append(token['contracts_ticker_symbol'])
+                    list_names.append(token['contract_ticker_symbol'])
                     list_balance.append(balance)
                     list_value_usd.append(round(token['quote'],0))
         df = utils.create_data_frame(list_names,list_value_usd,list_balance)
