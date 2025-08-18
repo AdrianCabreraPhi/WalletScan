@@ -27,8 +27,9 @@ def get_balance_tron(wallet):
 def get_balance_evm_chain(wallet,chain):
     url = f"https://api.covalenthq.com/v1/{list_chains_id[chain]['code']}/address/{wallet}/balances_v2/?key={os.getenv('GOLD_RUSH_API_KEY')}"
     response = requests.get(url)
+    data = response.json()
+
     if response.status_code is 200:
-        data = response.json()
         list_names,list_balance,list_value_usd = [],[],[]
         
         for token in data['data']['items']:
@@ -39,8 +40,8 @@ def get_balance_evm_chain(wallet,chain):
                     list_value_usd.append(round(token['quote'],0))
         df = utils.create_data_frame(list_names,list_value_usd,list_balance)
 
-        return df
-    return False
+        return {"status":True,"message":"Successfully","result":df}
+    return {"status":False,"message":data["error_message"],"result":None}
 
 
 

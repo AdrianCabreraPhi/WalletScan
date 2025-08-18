@@ -2,7 +2,6 @@
 import pandas as pd
 import settings
 import streamlit as st
-import re
 
 # String format
 # function to return available chains in message on interface
@@ -36,16 +35,10 @@ def filter_available_chains(wallet):
 
 
 def plot_data(df):
-        if isinstance(df,pd.DataFrame):
-                        st.dataframe(df)
-                        st.bar_chart(df.set_index("Token")["$"])
-                        msg = True
-        else:
-                st.toast("Unexpected error")
-                msg = False
-        
-        return msg
-                
+                st.dataframe(df)
+                st.bar_chart(df.set_index("Token")["$"])
+                st.toast("Successfully",icon="✅")
+                 
 
 
                              

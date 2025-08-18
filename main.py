@@ -9,14 +9,16 @@ def select_chain(chain):
     msg = st.toast("Loading data ...",icon="⌛")
     if chain in list_chains_id :
         df = endpoints.get_balance_evm_chain(wallet,chain)
-        response = utils.plot_data(df)
-        if response:
-            msg.toast("Successfully",icon="✅")
-        else:
-            msg.toast("Unexpected error",icon="❌")
+        if df['result'] is None:
+            msg.toast(df['message'],icon="❌")
+            return
+        
+        utils.plot_data(df['result'])
+        
+            
     if chain == "TRX":
         df = endpoints.get_balance_tron(wallet)
-        response = utils.plot_data(df)
+        utils.plot_data(df)
 
 # SIDEBAR
 with st.sidebar:
