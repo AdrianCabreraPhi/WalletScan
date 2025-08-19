@@ -8,7 +8,7 @@
 ## Install & Run
 ### 1. Docker
   ```bash
- to do 
+ docker run -e GOLD_RUSH_API_KEY='your_api_key' -p 8501:8501 acabrera809/walletscan
   ```
 ### 2. Run locally
   1. Create conda environment
